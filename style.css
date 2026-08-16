@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #f935da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Kertas */
+.paper {
+    position: relative;
+    width: 85vw;
+    max-width: 620px;
+    height: 68vh;
+    max-height: 680px;
+
+    background:
+      repeating-linear-gradient(
+            to bottom,
+            #e8e7dc 0px,
+            #e8e7dc 29px,
+            #d2d3ca 30px,
+            #e8e7dc 31px
+        );
+
+    border-radius: 8px;
+    transform: rotate(1.5deg);
+
+    box-shadow:
+        0 10px 40px rgba(255,255,255,0.08),
+        inset 0 0 20px rgba(0,0,0,0.12);
+
+    overflow: hidden;
+}
+
+/* Sedikit tekstur kertas */
+.paper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent 0px,
+            rgba(0,0,0,0.015) 1px,
+            transparent 3px
+        );
+
+    pointer-events: none;
+}
+
+/* Lubang sebelah kiri */
+.holes {
+    position: absolute;
+    left: 10px;
+    top: 18px;
+
+    height: calc(100% - 36px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.holes span {
+    width: 15px;
+    height: 15px;
+
+    background: #050505;
+    border-radius: 50%;
+
+    box-shadow:
+        inset 1px 1px 2px rgba(255,255,255,0.2),
+        0 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Tulisan */
+.text {
+    position: absolute;
+
+    top: 42px;
+    left: 80px;
+    right: 30px;
+
+    z-index: 2;
+}
+
+.text p {
+    font-family: "Courier New", monospace;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1.8;
+
+    color: #171717;
+
+    margin-bottom: 36px;
+}
+
+/* Membuat beberapa paragraf lebih menjorok */
+.text p:nth-child(2) {
+    margin-left: 10px;
+    }
+      height: 100vh;
+  background: #f5eafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
